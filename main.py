@@ -151,8 +151,7 @@ while True:
                 game.restart()
     if game.state == 'play':
         bg.update()
-        pipes.update()
-        gr.update()
+        pipes.update()         
     bird.update()
 
     bg.draw()
@@ -165,3 +164,4 @@ while True:
 
     pygame.display.flip()
     clock.tick(60)
+    print()

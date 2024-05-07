@@ -105,7 +105,8 @@ class Bird():
                     self.speed = 8
         if self.rect.collidelistall([pipes.bot_rect, pipes.top_rect]):
             game.state = 'over'
-class Gamemanager():
+
+class GameManager():
     def __init__(self):
         self.state = 'play'
         self.score = 0
@@ -139,8 +140,9 @@ bg = Background()
 gr = Ground()
 pipes = Pipes()
 bird = Bird()
-game = Gamemanager()
+game = GameManager()
 
+# игровой цикл
 while True:
     events = pygame.event.get()
     for e in events:
